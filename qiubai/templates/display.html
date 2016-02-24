@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>No77</title>
+    </head>
+    <body>
+        {% for joke in jokes %}
+            <h4>作者:{{ joke.author }}</h4>
+            <p>正文: {{ joke.content }}</p>
+            <p>评论</p>
+            {% for comment in joke.comments %}
+                <li>{{ comment.comment_author }}:          {{ comment.comment_content }}</li>
+            {% endfor %}
+            <hr>
+        {% endfor%}
+    </body>    
+
+</html>
